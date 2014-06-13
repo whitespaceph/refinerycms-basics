@@ -1,0 +1,32 @@
+cs:
+  refinery:
+    plugins:
+      basics:
+        title: Basics
+    basics:
+      admin:
+        basics:
+          actions:
+            create_new: Přidat Basic
+            reorder: Řadit Basics
+            reorder_done: Konec řazení Basics
+          records:
+            title: Basics
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Basics. Zvolte "Přidat Basic" pro přidání prvního basic.
+          basic:
+            view_live_html: Zobrazit náhled basic<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit basic
+            delete: Smazat basic
+      basics:
+        show:
+          other: Další Basics
+  activerecord:
+    attributes:
+      'refinery/basics/basic':
+        home_logo: Home Logo
+        about_title: About Title
+        about_description: About Description
+        about_excerpt: About Excerpt
+        about_services_title: About Services Title
+        about_services_list: About Services List

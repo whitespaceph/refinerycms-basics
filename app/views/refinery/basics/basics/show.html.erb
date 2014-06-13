@@ -1,0 +1,57 @@
+<% content_for :body_content_title do %>
+  <%= @basic.title %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Home Logo</h1>
+    <p>
+      <%= image_fu @basic.home_logo, nil %>
+    </p>
+  </section>
+  <section>
+    <h1>About Title</h1>
+    <p>
+      <%=raw @basic.about_title %>
+    </p>
+  </section>
+  <section>
+    <h1>About Description</h1>
+    <p>
+      <%=raw @basic.about_description %>
+    </p>
+  </section>
+  <section>
+    <h1>About Excerpt</h1>
+    <p>
+      <%=raw @basic.about_excerpt %>
+    </p>
+  </section>
+  <section>
+    <h1>About Services Title</h1>
+    <p>
+      <%=raw @basic.about_services_title %>
+    </p>
+  </section>
+  <section>
+    <h1>About Services List</h1>
+    <p>
+      <%=raw @basic.about_services_list %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="basics">
+      <% @basics.each do |basic| %>
+        <li>
+          <%= link_to basic.title, refinery.basics_basic_path(basic) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>
